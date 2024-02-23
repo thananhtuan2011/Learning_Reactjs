@@ -8,6 +8,20 @@ export default class Header extends Component {
             login: false
         }
     }
+    componentWillMount = () => {
+        console.log(" componentWillMount running")
+    };
+
+    componentWillUpdate() {
+        console.log(" componentWillUpdate ")
+    }
+
+
+    UpdateState = () => {
+        this.setState({ login: true })
+    }
+
+
 
     AddCart = () => {
         alert("add thành công ")
@@ -164,6 +178,10 @@ export default class Header extends Component {
                                 {this.Checklogin()}
 
                             </form>
+
+                            <div>
+                                <button onClick={() => this.UpdateState()}> click</button>
+                            </div>
                         </div>
                     </div>
                 </nav>
